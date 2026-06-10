@@ -12,7 +12,6 @@ A compiler-inspired static analysis tool that checks **Python** and **C** source
 | Lexical analysis | ✓ | ✓ |
 | Syntax analysis | ✓ | ✓ |
 | Semantic analysis | ✓ | ✓ |
-| CodeGen hints | — | ✓ |
 | AI fix suggestions | ✓ | ✓ |
 | AI code generation | ✓ | ✓ |
 
@@ -68,12 +67,6 @@ python main.py samples/bad_code.py
 python main.py samples/bad_code.c --format json
 ```
 
-### AI-powered fix suggestions (requires Anthropic API key)
-```bash
-export ANTHROPIC_API_KEY=your_key_here
-python main.py samples/bad_code.c --ai
-```
-
 ### Write AI-fixed code to a new file
 ```bash
 python main.py samples/bad_code.c --ai --fix
@@ -83,11 +76,6 @@ python main.py samples/bad_code.c --ai --fix
 ### AI explanation of each violation
 ```bash
 python main.py samples/bad_code.c --explain
-```
-
-### Generate new C code from a description
-```bash
-python main.py --generate "a function that reads integers from a file and returns their sum"
 ```
 
 ---
@@ -204,21 +192,6 @@ static-analyzer/
 └── docs/
     └── rules.md
 ```
-
----
-
-## AI Features (Anthropic API Key Required)
-
-Set your API key:
-```bash
-export ANTHROPIC_API_KEY=sk-ant-...    # Linux/macOS
-set ANTHROPIC_API_KEY=sk-ant-...       # Windows
-```
-
-The AI features use **Claude Sonnet** to:
-- **Fix all violations** in your code and explain every change
-- **Generate new code** from a plain-English description
-- **Explain violations** in plain English
 
 ---
 

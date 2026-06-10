@@ -13,7 +13,6 @@ A compiler-inspired static analysis tool that checks **Python** and **C** source
 | Syntax analysis | ✓ | ✓ |
 | Semantic analysis | ✓ | ✓ |
 | AI fix suggestions | ✓ | ✓ |
-| AI code generation | ✓ | ✓ |
 
 ---
 
